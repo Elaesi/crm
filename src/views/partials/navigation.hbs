@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="/">ELAESI</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+        {{!-- VALIDAMOS QUE SI EL USUARIO SE LOGEO LE ENSEÑEN LAS PESTAÑAS--}}
+        
+        {{#if user}}
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Inicio
+              <span class="sr-only">(current)</span></a>
+          </li> 
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownMenuProspectos"
+              href="/publicidad/prospectosList"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Prospectos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuProspectos">
+              <a class="dropdown-item" href="/publicidad/prospectosList">Lista</a>
+              <a class="dropdown-item" href="/publicidad/add/">Agregar</a>
+              <a class="dropdown-item" href="/publicidad/edit/">Reasignar</a>
+              <a class="dropdown-item" href="/prospectos/search/">Buscar*</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/vendedores"
+              id="navbarDropdownMenuProfile"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Vendedores
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuProfile">
+              <a class="dropdown-item" href="/vendedores/list">Lista</a>
+              <a class="dropdown-item" href="/vendedores/add/">Registrar</a>
+              <a class="dropdown-item" href="/vendedores/edit/">Buscar</a>
+              <a class="dropdown-item" href="/vendedores/reasignar/">Eliminar</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reportes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/profile"
+              id="navbarDropdownMenuProfile"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Perfil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuProfile">
+              <a class="dropdown-item" href="/profile">Mi Perfil</a>
+              <a class="dropdown-item" href="/logout">Cerrar Sesión</a>
+            </div>
+          </li>
+
+        {{else}}
+
+          <li class="nav-item">
+            <a href="/signin" class="nav-link">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signup" class="nav-link">Registrarse</a>
+          </li>
+        {{/if}}
+
+      </ul>
+    </div>
+  </div>
+</nav>

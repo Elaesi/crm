@@ -1,0 +1,208 @@
+{{!-- utiliza el main.hbs como fuente y solo se modifica el cuerpo de la página --}}
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/publicidad/add" method="POST">
+                        <div class="form-group">
+                            <label for="Id" class="form-label">Id</label>
+                            <input type="hidden" class="form-control" id="Id" name="Id" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="Nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="Apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="Telefono" class="form-label">Telefono</label>
+                            <input type="tel" class="form-control" id="Telefono" name="Telefono" placeholder="(XXX) XX-XXXX-XXXX" pattern="([0-9]){2-3} [0-9]{2}-[0-9]{4}-[0-9]{4}">
+                        </div>
+                        <div class="form-group">
+                            <label for="Correo" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="Fase" class="form-label">Fase</label>
+                             <select name="Fase" id="Fase" class="form-control">
+                              <option value="seleccione">Seleccione una Fase</option>
+                              <option value="Prospecto nuevo"> Prospecto nuevo</option>
+                              <option value="Contactado"> Contactado</option>
+                              <option value="Cliente"> Cliente</option>
+                              <option value="Cliente Frecuente"> Cliente Frecuente</option>
+                              <option value="Exalumno"> Exalumno</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Origen" class="form-label">Origen</label>
+                            <select name="Origen" id="Origen" class="form-control">
+                                <option value="selecciona">Seleccione un Origen</option>
+                                <option value="Educaedu">Educaedu</option>
+                                <option value="Pagina Web">Pagina Web</option>
+                                <option value="Chat en Vivo">Chat en Vivo</option>
+                                <option value="Telefono">Telefono</option>
+                                <option value="Recomendacion">Recomendacion</option>
+                                <option value="Correo">Correo</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Correo Masivo">Correo Masivo</option>
+                                <option value="Instagram">Instagram</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Motivo" class="form-label">Motivo</label>
+                            <select name="Motivo" id="Motivo" class="form-control">
+                                <option value="Selecciona un Motivo">Selecciona un Motivo</option>
+                                        <option value="Acupuntura Avanzada">Acupuntura Avanzada</option>
+                                        <option value="Acupuntura">Acupuntura</option>
+                                        <option value="Acupuntura Humana">Acupuntura Humana</option>
+                                        <option value="Acupuntura Japonesa">Acupuntura Japonesa</option>
+                                        <option value="Acupuntura Veterinaria">Acupuntura Veterinaria</option>
+                                        <option value="Acupuntura Veterinaria (No Medicos)">Acupuntura Veterinaria (No Medicos)</option>
+                                        <option value="Aromaterpia Energetica">Aromaterpia Energetica</option>
+                                        <option value="Auriculoterapia">Auriculoterapia</option>
+                                        <option value="Auxiliar En Enfermería">Auxiliar En Enfermería</option>
+                                        <option value="Ayurveda">Ayurveda</option>
+                                        <option value="Bachillerato General">Bachillerato General</option>
+                                        <option value="Bioenergía Holística">Bioenergía Holística</option>
+                                        <option value="Bioenergia Holistico Avanzado">Bioenergia Holistico Avanzado</option>
+                                        <option value="Coaching">Coaching</option>
+                                        <option value="Congreso Internacional Multidisciplinario De Medicina Regenerativa Y Estética">Congreso Internacional Multidisciplinario De Medicina Regenerativa Y Estética</option>
+                                        <option value="Constelaciones Familiares">Constelaciones Familiares</option>
+                                        <option value="Constelaciones Familiares Avanzado">Constelaciones Familiares Avanzado</option>
+                                        <option value="Control De Peso">Control De Peso</option>
+                                        <option value="Cosmetología Y Cosmiatría">Cosmetología Y Cosmiatría</option>
+                                        <option value="Cosmiatría Alternativa">Cosmiatría Alternativa</option>
+                                        <option value="Cosmiatria Avanzada">Cosmiatria Avanzada</option>
+                                        <option value="Cosmiatría Medica">Cosmiatría Medica</option>
+                                        <option value="Cosmitria Alternativa">Cosmitria Alternativa</option>
+                                        <option value="Cuidado De Adultos Mayores">Cuidado De Adultos Mayores</option>
+                                        <option value="Cultura Anahuaca">Cultura Anahuaca</option>
+                                        <option value="Curso Micropigmentación Y Microblading">Curso Micropigmentación Y Microblading</option>
+                                        <option value="Desarrollo De Tonal Nagual">Desarrollo De Tonal Nagual</option>
+                                        <option value="Diplomado Medicina Estética Y Regenerativa">Diplomado Medicina Estética Y Regenerativa</option>
+                                        <option value="Diplomado Terapia Neural">Diplomado Terapia Neural</option>
+                                        <option value="Diseño Y Construccion De Jardines">Diseño Y Construccion De Jardines</option>
+                                        <option value="Electro-Acupuntura">Electro-Acupuntura</option>
+                                        <option value="Enfermería (Auxiliar)">Enfermería (Auxiliar)</option>
+                                        <option value="Flores De Bach">Flores De Bach</option>
+                                        <option value="Gerencia Y Certificación De Establecimientos Medicos">Gerencia Y Certificación De Establecimientos Medicos</option>
+                                        <option value="Grafología">Grafología</option>
+                                        <option value="Herbolaria">Herbolaria</option>
+                                        <option value="Herbolaria Anahuac">Herbolaria Anahuac</option>
+                                        <option value="Herbolaria In Pahtli In Toltecayotl (Arte Y Medicina)">Herbolaria In Pahtli In Toltecayotl (Arte Y Medicina)</option>
+                                        <option value="Homeopatía">Homeopatía</option>
+                                        <option value="Homeopatía Avanzada">Homeopatía Avanzada</option>
+                                        <option value="Interpretacion De Analisis Clinicos">Interpretacion De Analisis Clinicos</option>
+                                        <option value="Kinesiología">Kinesiología</option>
+                                        <option value="Maquillaje Ancestral">Maquillaje Ancestral</option>
+                                        <option value="Masaje Con Obsidiana">Masaje Con Obsidiana</option>
+                                        <option value="Masaje Sueco">Masaje Sueco</option>
+                                        <option value="Masaje Terapéutico">Masaje Terapéutico</option>
+                                        <option value="Medicina Cannábica">Medicina Cannábica</option>
+                                        <option value="Medicina Estetica Y Regenerativa">Medicina Estetica Y Regenerativa</option>
+                                        <option value="Medicina Fisica Y Rehabilitación Para Médicos">Medicina Fisica Y Rehabilitación Para Médicos</option>
+                                        <option value="Medicina Tradicional Mexicana">Medicina Tradicional Mexicana</option>
+                                        <option value="Mitocondrial">Mitocondrial</option>
+                                        <option value="Nutrición Celular Y Nutracéuticos">Nutrición Celular Y Nutracéuticos</option>
+                                        <option value="Nutrición Y Dieototerapia">Nutrición Y Dieototerapia</option>
+                                        <option value="Nutrición Y Entrenamiento Deportivo">Nutrición Y Entrenamiento Deportivo</option>
+                                        <option value="Nutrición Y Naturoterapia">Nutrición Y Naturoterapia</option>
+                                        <option value="Ozonoterapia">Ozonoterapia</option>
+                                        <option value="Ozonoterapia Avanzado">Ozonoterapia Avanzado</option>
+                                        <option value="Ozonoterapia Basico">Ozonoterapia Basico</option>
+                                        <option value="Ozonoterapia Veterinaria">Ozonoterapia Veterinaria</option>
+                                        <option value="Podología">Podología</option>
+                                        <option value="Quelación">Quelación</option>
+                                        <option value="Quiropractica">Quiropractica</option>
+                                        <option value="Rehabilitación Física Funcional">Rehabilitación Física Funcional</option>
+                                        <option value="Sueroterapia">Sueroterapia</option>
+                                        <option value="Tatuador Cosmético Y Artístico">Tatuador Cosmético Y Artístico</option>
+                                        <option value="Técnico">Técnico</option>
+                                        <option value="Temazcal">Temazcal</option>
+                                        <option value="Terapia Holística Integral">Terapia Holística Integral</option>
+                                        <option value="Terapia Neural">Terapia Neural</option>
+                                        <option value="Terapia Para Animales De Compañía">Terapia Para Animales De Compañía</option>
+                                        <option value="Terapias Bio-Oxidativas">Terapias Bio-Oxidativas</option>
+                                        <option value="Terapias Bioxidativas">Terapias Bioxidativas</option>
+                                        <option value="Terapias Holísticas Integrales">Terapias Holísticas Integrales</option>
+                                        <option value="Toltequidad Y Desarrollo Organizacional">Toltequidad Y Desarrollo Organizacional</option>
+                                        <option value="Tonalámatl Y Calendárica">Tonalámatl Y Calendárica</option>
+                                        <option value="Yoga (Yolmelahuac)">Yoga (Yolmelahuac)</option>
+                                        <option value="Talleres"> Talleres</option> 
+                                        <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Comentario" class="form-label">Comentario</label>
+                            <textarea rows="2" class="form-control" id="Comentario" name="Comentario" placeholder="Comentario"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaAsignacion" class="form-label">Fecha de Asignación</label>
+                            <input type="datetime-local" class="form-control" id="fechaAsignacion" name="fechaAsignacion" placeholder="Fecha de Asignación">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendedorAsignado" class="form-label">Vendedor Asignado</label>
+                            <select name="vendedorAsignado" id="vendedorAsignado" class="form-control">
+                                <option value="Selecciona un Vendedor">Selecciona un Vendedor</option>
+                                <option value="Alan Chavez">Alan Chavez</option>
+                                <option value="Adrian Vazquez">Adrian Vazquez</option>
+                                <option value="Alberto Salgado">Alberto Salgado</option>
+                                <option value="Andrade Azucena">Andrade Azucena</option>
+                                <option value="Aparicio Cesar">Aparicio Cesar</option>
+                                <option value="Benitez Karina">Benitez Karina</option>
+                                <option value="Blanca Cruz">Blanca Cruz</option>
+                                <option value="Brian Guido">Brian Guido</option>
+                                <option value="Chavez Daniel">Chavez Daniel</option>
+                                <option value="Chrystian Ramirez">Chrystian Ramirez</option>
+                                <option value="De Jesus Morales Ana Maria">De Jesus Morales Ana Maria</option>
+                                <option value="Einar Rodriguez">Einar Rodriguez</option>
+                                <option value="Esther Cortez">Esther Cortez</option>
+                                <option value="Francisco">Francisco</option>
+                                <option value="Isabel Diaz">Isabel Diaz</option>
+                                <option value="Isamar Francisco">Isamar Francisco</option>
+                                <option value="Kassandra Rodriguez">Kassandra Rodriguez</option>
+                                <option value="Mari Cruz">Mari Cruz</option>
+                                <option value="Marilu Ocampo">Marilu Ocampo</option>
+                                <option value="Marilyn Galindo">Marilyn Galindo</option>
+                                <option value="Molina Carmen">Molina Carmen</option>
+                                <option value="ONLINE">ONLINE</option>
+                                <option value="Perez Ruben">Perez Ruben</option>
+                                <option value="Rafael Morales">Rafael Morales</option>
+                                <option value="Ramirez Chrystian">Ramirez Chrystian</option>
+                                <option value="Romero Mendoza Uriel">Romero Mendoza Uriel</option>
+                                <option value="Thania Contreras">Thania Contreras</option>
+                                <option value="Vargas David">Vargas David</option>
+                                <option value="Zapata Pamela">Zapata Pamela</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Publicista" class="form-label">Asignado Por</label>
+                            <select name="Publicista" id="Publicista" class="form-control">
+                                <option value="Selecciona un Publicista">Selecciona un Publicista</option>
+                                <option value="Elaesi CDMX">Elaesi CDMX</option>
+                                <option value="Copalmech">Copalmech</option>
+                                <option value="Capacitacion Promedicas">Capacitacion Promedicas</option>
+                                <option value="Cesar Jimenez">Cesar Jimenez</option>
+                                <option value="Elaesi Cuernavaca">Elaesi Cuernavaca</option>
+                                <option value="Elaesi Toluca">Elaesi Toluca</option>
+                                <option value="Javier Cruz">Javier Cruz</option>
+                                <option value="Administracion Cuernavaca">Administracion Cuernavaca</option>
+                                <option value="Control escolar CDMX">Control escolar CDMX</option>
+                                <option value="Promedicas CDMX">Promedicas CDMX</option>
+                                <option value="Publicidad CDMX">Publicidad CDMX</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

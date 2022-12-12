@@ -1,0 +1,124 @@
+/* color navigation */
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+*{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body{
+    background-color: #f5f6f5;
+}
+
+/*
+.index{
+    width: 90vw;
+    height: 90vh;
+}*/
+
+
+.masthead{
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    background-image: url('/img/logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.masthead h1{
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: #295239;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    background-image: url('../icons/menu-svgrepo-com.svg');
+    background-color: #e9ecef;
+}
+
+a{
+    color: #e9ecef;
+}
+
+a:hover{
+    color: #e9ecefae;
+}
+
+/* para la seccion de las celdas */
+
+.container-horarios{
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-top: 20px;
+    padding-bottom: auto;
+}
+
+.container-exterior{
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    max-width: -moz-fit-content;
+    max-height:  -moz-fit-content;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.container-interior{
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 84.4vh;
+    padding-bottom: 20px;
+}
+
+.horarios{
+    min-width: max-content;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+.horarios th{
+    position: sticky;
+    top: 0px;
+    background-color: #295239;
+    color: rgb(241, 245, 179);
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    outline: 0.7px solid black;
+    border: 1.5px solid black;
+}
+
+.horarios th, td{
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.horarios td{
+    text-align: left;
+    font-size: 15px;
+    border: 1px solid rgb(177, 177, 177);
+    padding-left: 20px;
+}
+
+
+
+
+
+@media(min-width: 92px){
+    .masthead h1{
+        font-size: 5.5rem;
+    }
+}

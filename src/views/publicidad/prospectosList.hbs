@@ -1,0 +1,81 @@
+<!--
+<div class="container p-4">
+    <div class="row">
+        {{#each prospecto}}
+            {{!-- se ordenan en la consulta de la BD --}}
+            <div class="col-md-3 p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <a href="/{{datosVendedor}}"  class="text-light">
+                            <h3 class="card-title text-uppercase" id="nombreVendedor">
+                                {{ nombreVendedor }}
+                            </h3>
+                        </a>
+                        <p class="m-2"> {{ sede }} </p>
+                        <p> {{timeago CREATED_AT}} </p>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay prospectos para mostrar!</p>
+                    <a href="/publicidad/add">Registrar Prospecto</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+-->
+
+<div class="container-horarios"> 
+    <div class="container-exterior">
+        <div class="container-interior">
+            <table class="horarios">
+                <thead>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDOS</th>
+                    <th>TELEFONO</th>
+                    <th>CORREO</th>
+                    <th>FASE</th>
+                    <th>ORIGEN</th>
+                    <th>MOTIVO</th>
+                    <th>COMENTARIOS</th>
+                    <th>FECHA ASIGNACION</th>
+                    <th>ASIGNADO A</th>
+                    <th>ASIGNO</th>
+                    <th>FECHA REASIGNACION</th>
+                    <th>REASIGNO</th>
+                </thead>
+                <tbody>
+                    {{#each prospecto}}
+                    <tr>
+                        <td>{{ id }}</td>
+                        <td>{{ nombre }}</td>
+                        <td>{{ apellidos }}</td>
+                        <td>{{ telefono }}</td>
+                        <td>{{ correo }}</td>
+                        <td>{{ fase }}</td>
+                        <td>{{ origen }}</td>
+                        <td>{{ motivo }}</td>
+                        <td>{{ comentarios }}</td>
+                        <td>{{ fechaAsignacion }}</td>
+                        <td>{{ vendedorAsignado }}</td>
+                        <td>{{ asignadoPor }}</td>
+                        <td>{{ fechaReasignacion }}</td>
+                        <td>{{ reasigno }}</td>
+                    </tr>
+                    {{else}}
+                        <div class="col-md-4 mx-auto">
+                            <div class="card card-body text-center">
+                                <p>No hay prospectos para mostrar!</p>
+                                <a href="/publicidad/add">Registrar Prospecto</a>
+                            </div>
+                        </div>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
